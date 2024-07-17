@@ -1,0 +1,153 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-image: url('imageBackround.jpg');/* Fondo de pantalla */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Estilo del header */
+.header {
+    text-align: center;
+    color: rgb(230, 199, 230);
+    padding: 20px 0;
+}
+
+/* Estilo del nav */
+.navigation {
+    background-color: rgba(255, 192, 203, 0.516);
+    padding: 10px 0;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navigation a {
+    color: rgb(12, 11, 11);
+    text-decoration: none;
+}
+
+.navigation li {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    display: flex;
+    align-items: center;
+}
+
+.navigation li::after {
+    content: '';
+    display: block;
+    width: 1px; /* Grosor de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: rgba(12, 11, 11, 0.5); /* Color de la línea */
+    margin-left: 15px; /* Espacio entre el texto y la línea */
+}
+
+.navigation li:last-child::after {
+    content: none; /* Quitar la línea del último elemento */
+}
+
+/* Estilo de las secciones */
+.section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.section p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    line-height: 1.6; /* Ajustar altura de línea para mejorar legibilidad */
+}
+
+.highlight {
+    font-weight: bold; /* Texto en negrita */
+    color: rgb(244, 168, 244); /* Texto en color rosa */
+}
+
+.social-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.social-section p {
+    margin-top: 40px; /* Espacio entre el último párrafo y la sección social */
+}
+
+.social-button {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(243, 41, 41, 0.406);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.social-button a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: lightgoldenrodyellow;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-button:hover {
+    background-color: rgba(255, 192, 203, 0.502);
+    cursor: pointer;
+}
+
+.social-section p {
+        color: rgb(247, 247, 255); /* Color del texto */
+}
+
+/* Estilo de otros elementos */
+h2 {
+    color: rgba(214, 157, 214, 0.856);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.oval-image {
+    border-radius: 50%; /* Hace que la imagen sea ovalada */
+    max-width: 20%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    display: block; /* Elimina espacios en blanco adicionales debajo de la imagen */
+    margin: 20px auto; /* Centra la imagen con un margen arriba y abajo */
+}
+
+/* Estilo del footer */
+footer {
+    padding: 20px 0;
+    border-top: 3px solid rgba(255, 255, 255, 0.3); /* Línea separadora */
+    margin-top: 20px; /* Espacio arriba del footer */
+    color: black;
+}
+
+footer p {
+    margin-top: 20px; /* Espacio entre el último párrafo y el footer */
+}
