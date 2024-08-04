@@ -9,11 +9,11 @@
 body {
     font-family: 'Arial', sans-serif;
     color: white;
-    background-image: url('imageBackround.jpg');/* Fondo de pantalla */
+    background-image: url('imageBackround.jpg'); /* Fondo de pantalla */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
+    text-align: left; /* Justificar a la izquierda */
 }
 
 /* Estilo del header */
@@ -50,10 +50,10 @@ body {
 .navigation li::after {
     content: '';
     display: block;
-    width: 1px; /* Grosor de la línea */
-    height: 20px; /* Altura de la línea */
-    background-color: rgba(12, 11, 11, 0.5); /* Color de la línea */
-    margin-left: 15px; /* Espacio entre el texto y la línea */
+    width: 1px; 
+    height: 20px;
+    background-color: rgba(12, 11, 11, 0.5); 
+    margin-left: 15px;
 }
 
 .navigation li:last-child::after {
@@ -72,8 +72,8 @@ body {
 }
 
 .highlight {
-    font-weight: bold; /* Texto en negrita */
-    color: rgb(244, 168, 244); /* Texto en color rosa */
+    font-weight: bold; 
+    color: rgb(244, 168, 244); 
 }
 
 .social-section {
@@ -89,37 +89,47 @@ body {
 }
 
 .social-button {
-    margin: 10px;
-    width: 150px;
-    height: 150px;
+    margin: 10px; 
+    width: 100px;
+    height: 100px; 
     background-color: rgba(243, 41, 41, 0.406);
-    border-radius: 5px;
-    overflow: hidden;
+    border-radius: 10px; /* Redondea las esquinas del botón */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del área del botón */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
+    justify-content: center; 
+    align-items: center; 
+    transition: background-color 0.3s; /* Define una transición suave para los cambios en el color de fondo */
 }
 
 .social-button a {
-    width: 100%;
-    height: 100%;
+    width: 100%; 
+    height: 100%; 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none; /* Elimina cualquier subrayado u otras decoraciones de texto del enlace */
     color: lightgoldenrodyellow;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 40px; 
 }
 
-.social-button:hover {
+.social-button:hover { /* Selecciona todos los elementos con la clase social-button cuando se pone el cursor sobre ellos */
     background-color: rgba(255, 192, 203, 0.502);
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el ratón sobre el botón */
 }
 
 .social-section p {
-        color: rgb(247, 247, 255); /* Color del texto */
+    color: rgb(247, 247, 255); 
+}
+
+.call-to-action {
+    font-size: 15px; 
+    padding: 20px; 
+    text-align: center; 
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    background-color: #442f59b9;
+    border-radius: 15px;
+    margin-top: 40px; 
 }
 
 /* Estilo de otros elementos */
@@ -133,11 +143,12 @@ img {
 }
 
 .oval-image {
-    border-radius: 50%; /* Hace que la imagen sea ovalada */
-    max-width: 20%; /* Ajusta el tamaño máximo de la imagen */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-    display: block; /* Elimina espacios en blanco adicionales debajo de la imagen */
-    margin: 20px auto; /* Centra la imagen con un margen arriba y abajo */
+    border-radius: 50%; 
+    max-width: 15%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; 
+    position: absolute; 
+    top: 140px; /* Ajusta este valor para mover la imagen más arriba o abajo */
+    right: 35px; /* Ajusta este valor para mover la imagen más a la derecha o izquierda */
 }
 
 /* Estilo del footer */
@@ -145,9 +156,6 @@ footer {
     padding: 20px 0;
     border-top: 3px solid rgba(255, 255, 255, 0.3); /* Línea separadora */
     margin-top: 20px; /* Espacio arriba del footer */
+    text-align: center;
     color: black;
-}
-
-footer p {
-    margin-top: 20px; /* Espacio entre el último párrafo y el footer */
 }
