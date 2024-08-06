@@ -14,26 +14,27 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     text-align: left; /* Justificar a la izquierda */
+    line-height: 1.6;
 }
 
 /* Estilo del header */
 .header {
     text-align: center;
     color: rgb(230, 199, 230);
-    padding: 20px 0;
+    padding: 1rem;
 }
 
 /* Estilo del nav */
 .navigation {
     background-color: rgba(255, 192, 203, 0.516);
-    padding: 10px 0;
+    padding: 0.5rem 0;
 }
 
 .navigation ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1rem;
     flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
 }
 
@@ -43,7 +44,7 @@ body {
 }
 
 .navigation li {
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -52,24 +53,23 @@ body {
     content: '';
     display: block;
     width: 1px; 
-    height: 20px;
+    height: 1rem;
     background-color: rgba(12, 11, 11, 0.5); 
-    margin-left: 15px;
+    margin-left: 1rem;
 }
 
 .navigation li:last-child::after {
-    content: none; /* Quitar la línea del último elemento */
+    content: none;
 }
 
 /* Estilo de las secciones */
 .section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
 .section p {
-    margin-bottom: 15px; /* Espacio entre párrafos */
-    line-height: 1.6; /* Ajustar altura de línea para mejorar legibilidad */
+    margin-bottom: 1rem;
 }
 
 .highlight {
@@ -79,28 +79,24 @@ body {
 
 .social-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.social-section p {
-    margin-top: 40px; /* Espacio entre el último párrafo y la sección social */
-    color: rgb(247, 247, 255); 
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .social-button {
-    margin: 10px; 
-    width: 100px;
-    height: 100px; 
+    margin: 0.5rem; 
+    width: 6.25rem;
+    height: 6.25rem; 
     background-color: rgba(243, 41, 41, 0.406);
-    border-radius: 10px; /* Redondea las esquinas del botón */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga del área del botón */
+    border-radius: 10px; 
+    overflow: hidden; 
     display: flex;
     justify-content: center; 
     align-items: center; 
-    transition: background-color 0.3s; /* Define una transición suave para los cambios en el color de fondo */
+    transition: background-color 0.3s;
 }
 
 .social-button a {
@@ -109,25 +105,25 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    text-decoration: none; /* Elimina cualquier subrayado u otras decoraciones de texto del enlace */
+    text-decoration: none; 
     color: lightgoldenrodyellow;
-    font-size: 40px; 
+    font-size: 2.5rem; 
 }
 
-.social-button:hover { /* Selecciona todos los elementos con la clase social-button cuando se pone el cursor sobre ellos */
+.social-button:hover { 
     background-color: rgba(255, 192, 203, 0.502);
-    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el ratón sobre el botón */
+    cursor: pointer; 
 }
 
 .call-to-action {
-    font-size: 15px; 
-    padding: 20px; 
+    font-size: 1rem; 
+    padding: 1rem; 
     text-align: center; 
     font-weight: bold;
     color: rgb(255, 255, 255); 
     background-color: #442f59b9;
     border-radius: 15px;
-    margin-top: 40px; 
+    margin-top: 2rem; 
 }
 
 /* Estilo de otros elementos */
@@ -142,18 +138,18 @@ img {
 
 .oval-image {
     border-radius: 50%; 
-    max-width: 15%; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 15%;
     height: auto; 
     position: absolute; 
-    top: 10%; /* Ajusta este valor para mover la imagen más arriba o abajo */
-    right: 5%; /* Ajusta este valor para mover la imagen más a la derecha o izquierda */
+    top: 10%; 
+    right: 5%; 
 }
 
 /* Estilo del footer */
 footer {
-    padding: 20px 0;
-    border-top: 3px solid rgba(255, 255, 255, 0.3); /* Línea separadora */
-    margin-top: 20px; /* Espacio arriba del footer */
+    padding: 1rem 0;
+    border-top: 3px solid rgba(255, 255, 255, 0.3); 
+    margin-top: 1rem; 
     text-align: center;
     color: black;
 }
@@ -162,22 +158,22 @@ footer {
 @media (max-width: 768px) {
     .navigation ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.5rem;
     }
 
     .oval-image {
-        max-width: 30%; /* Aumenta el tamaño máximo en pantallas pequeñas */
+        max-width: 30%;
         top: 5%;
         right: 2%;
     }
     
     .social-button {
-        width: 80px;
-        height: 80px;
+        width: 5rem;
+        height: 5rem;
     }
 
     .call-to-action {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
@@ -189,11 +185,11 @@ footer {
     }
 
     .social-button {
-        width: 60px;
-        height: 60px;
+        width: 4rem;
+        height: 4rem;
     }
 
     .call-to-action {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 }
