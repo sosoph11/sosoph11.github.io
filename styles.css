@@ -34,8 +34,9 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite ajustar el diseño en pantallas pequeñas */
     gap: 1rem;
-    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+    padding: 0;
 }
 
 .navigation a {
@@ -52,9 +53,9 @@ body {
 .navigation li::after {
     content: '';
     display: block;
-    width: 1px; 
+    width: 1px;
     height: 1rem;
-    background-color: rgba(12, 11, 11, 0.5); 
+    background-color: rgba(12, 11, 11, 0.5);
     margin-left: 1rem;
 }
 
@@ -77,6 +78,27 @@ body {
     color: rgb(244, 168, 244); 
 }
 
+/* Contenedor principal para flexbox */
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-content .text {
+    flex: 1;
+}
+
+.oval-image {
+    border-radius: 50%;
+    max-width: 100%; /* Permite que la imagen se ajuste a diferentes tamaños de pantalla */
+    height: auto; 
+    max-width: 15%; /* Ajusta según sea necesario */
+    flex: 0 0 auto;
+}
+
+/* Estilo de la sección de redes sociales */
 .social-section {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +109,6 @@ body {
 }
 
 .social-button {
-    margin: 0.5rem; 
     width: 6.25rem;
     height: 6.25rem; 
     background-color: rgba(243, 41, 41, 0.406);
@@ -136,15 +157,6 @@ img {
     height: auto;
 }
 
-.oval-image {
-    border-radius: 50%; 
-    max-width: 15%;
-    height: auto; 
-    position: absolute; 
-    top: 10%; 
-    right: 5%; 
-}
-
 /* Estilo del footer */
 footer {
     padding: 1rem 0;
@@ -163,10 +175,8 @@ footer {
 
     .oval-image {
         max-width: 30%;
-        top: 5%;
-        right: 2%;
     }
-    
+
     .social-button {
         width: 5rem;
         height: 5rem;
@@ -180,8 +190,6 @@ footer {
 @media (max-width: 480px) {
     .oval-image {
         max-width: 40%;
-        top: 0;
-        right: 0;
     }
 
     .social-button {
