@@ -20,13 +20,13 @@ body {
 .header {
     text-align: center;
     color: rgb(230, 199, 230);
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 /* Estilo del nav */
 .navigation {
     background-color: rgba(255, 192, 203, 0.516);
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .navigation ul {
@@ -34,6 +34,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .navigation a {
@@ -82,10 +83,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
-}
-
-.social-section p {
-    margin-top: 40px; /* Espacio entre el último párrafo y la sección social */
 }
 
 .social-button {
@@ -146,16 +143,63 @@ img {
     border-radius: 50%; 
     max-width: 15%; /* Ajusta el tamaño máximo de la imagen */
     height: auto; 
-    position: absolute; 
-    top: 140px; /* Ajusta este valor para mover la imagen más arriba o abajo */
-    right: 35px; /* Ajusta este valor para mover la imagen más a la derecha o izquierda */
+    position: relative; 
+    margin-top: 20px; /* Ajusta la posición en función del contenido */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilo del footer */
 footer {
-    padding: 20px 0;
+    padding: 20px 10px;
     border-top: 3px solid rgba(255, 255, 255, 0.3); /* Línea separadora */
     margin-top: 20px; /* Espacio arriba del footer */
     text-align: center;
     color: black;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .call-to-action {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .call-to-action {
+        font-size: 12px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 10px;
+        margin: 10px 0;
+    }
 }
