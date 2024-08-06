@@ -20,13 +20,13 @@ body {
 .header {
     text-align: center;
     color: rgb(230, 199, 230);
-    padding: 20px 10px;
+    padding: 20px 0;
 }
 
 /* Estilo del nav */
 .navigation {
     background-color: rgba(255, 192, 203, 0.516);
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .navigation ul {
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
 }
 
 .navigation a {
@@ -85,6 +85,11 @@ body {
     margin-bottom: 40px;
 }
 
+.social-section p {
+    margin-top: 40px; /* Espacio entre el último párrafo y la sección social */
+    color: rgb(247, 247, 255); 
+}
+
 .social-button {
     margin: 10px; 
     width: 100px;
@@ -114,10 +119,6 @@ body {
     cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el ratón sobre el botón */
 }
 
-.social-section p {
-    color: rgb(247, 247, 255); 
-}
-
 .call-to-action {
     font-size: 15px; 
     padding: 20px; 
@@ -143,28 +144,33 @@ img {
     border-radius: 50%; 
     max-width: 15%; /* Ajusta el tamaño máximo de la imagen */
     height: auto; 
-    position: relative; 
-    margin-top: 20px; /* Ajusta la posición en función del contenido */
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute; 
+    top: 10%; /* Ajusta este valor para mover la imagen más arriba o abajo */
+    right: 5%; /* Ajusta este valor para mover la imagen más a la derecha o izquierda */
 }
 
 /* Estilo del footer */
 footer {
-    padding: 20px 10px;
+    padding: 20px 0;
     border-top: 3px solid rgba(255, 255, 255, 0.3); /* Línea separadora */
     margin-top: 20px; /* Espacio arriba del footer */
     text-align: center;
     color: black;
 }
 
-/* Estilos Responsivos */
+/* Responsividad */
 @media (max-width: 768px) {
     .navigation ul {
         flex-direction: column;
         gap: 10px;
     }
 
+    .oval-image {
+        max-width: 30%; /* Aumenta el tamaño máximo en pantallas pequeñas */
+        top: 5%;
+        right: 2%;
+    }
+    
     .social-button {
         width: 80px;
         height: 80px;
@@ -173,18 +179,15 @@ footer {
     .call-to-action {
         font-size: 14px;
     }
-
-    .header {
-        padding: 15px;
-    }
-
-    .section {
-        padding: 15px;
-        margin: 15px 0;
-    }
 }
 
 @media (max-width: 480px) {
+    .oval-image {
+        max-width: 40%;
+        top: 0;
+        right: 0;
+    }
+
     .social-button {
         width: 60px;
         height: 60px;
@@ -192,14 +195,5 @@ footer {
 
     .call-to-action {
         font-size: 12px;
-    }
-
-    .header {
-        padding: 10px;
-    }
-
-    .section {
-        padding: 10px;
-        margin: 10px 0;
     }
 }
