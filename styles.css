@@ -1,30 +1,26 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo del body */
 body {
     font-family: 'Arial', sans-serif;
     color: white;
-    background-image: url('imageBackround.jpg'); /* Fondo de pantalla */
+    background-image: url('imageBackround.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: left; /* Justificar a la izquierda */
+    text-align: left;
     line-height: 1.6;
 }
 
-/* Estilo del header */
 .header {
     text-align: center;
     color: rgb(230, 199, 230);
     padding: 1rem;
 }
 
-/* Estilo del nav */
 .navigation {
     background-color: rgba(255, 192, 203, 0.516);
     padding: 0.5rem 0;
@@ -34,7 +30,7 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite ajustar el diseño en pantallas pequeñas */
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
 }
@@ -63,7 +59,6 @@ body {
     content: none;
 }
 
-/* Estilo de las secciones */
 .section {
     padding: 1rem;
     margin: 1rem 0;
@@ -78,10 +73,9 @@ body {
     color: rgb(244, 168, 244); 
 }
 
-/* Contenedor principal para flexbox */
 .about-content {
     display: flex;
-    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
 }
@@ -92,9 +86,8 @@ body {
 
 .oval-image {
     border-radius: 50%;
-    max-width: 100%; /* Permite que la imagen se ajuste a diferentes tamaños de pantalla */
-    height: auto; 
-    max-width: 15%; /* Ajusta según sea necesario */
+    max-width: 15%;
+    height: auto;
     flex: 0 0 auto;
 }
 
@@ -166,7 +159,20 @@ footer {
     color: black;
 }
 
-/* Responsividad */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navigation ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .social-button {
+        width: 5rem;
+        height: 5rem;
+    }
+    .call-to-action {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navigation ul {
         flex-direction: column;
